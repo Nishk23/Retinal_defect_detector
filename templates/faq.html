@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Result</title>
+    <link rel="stylesheet" href=" {{url_for('static', filename='bootstrap/css/bootstrap.min.css')}} ">
+    <link rel="stylesheet" href=" {{url_for('static', filename='css/styles.min.css')}} ">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <div class="container"><a class="navbar-brand logo" href="{{url_for('index')}}">Raptors</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        </div>
+    </nav>
+    <main class="page faq-page">
+        <section class="clean-block clean-faq dark">
+            <div class="container">
+                <div class="block-heading">
+                    <h2 class="text-info">Hello {{n1}},</h2>
+                    <h4>{{s1}}</h4>
+                </div>
+                <div class="block-content">
+                    {% if p == 0 %}
+                        <div class="faq-item">
+                            <h4 class="question">Symptoms:</h4>
+                            <div class="answer">
+                                <p>CNV can create a sudden deterioration of central vision, noticeable within a few weeks. Other symptoms which can occur include colour disturbances, and metamorphopsia (distortions in which straight lines appears wavy).</p>
+                                <p>Haemorrhaging of the new blood vessels can accelerate the onset of symptoms of CNV. CNV may also include the feeling of pressure behind your eye.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <h4 class="question">Treatment:</h4>
+                            <div class="answer">
+                                <p>CNV can be treated with photodynamic therapy (PDT) coupled with a photosensitive drug such as verteporfin (Visudyne). The drug is given intravenously. It is then activated in the eye by a laser light. The drug destroys the new blood vessels, and prevents any new vessels forming by forming thrombi.</p>
+                                <p>A Cochrane Review published in 2016 found that people with severe myopia (short-sightedness or near-sightedness) may benefit from being given anti-VEGF treatment.</p>
+                            </div>
+                        </div>
+                    {% elif p == 1 %}
+                        <div class="faq-item">
+                            <h4 class="question">Symptoms:</h4>
+                            <div class="answer">
+                                <p>The primary symptom of macular edema is blurry or wavy vision near or in the center of your field of vision. Colors might also appear washed out or faded.</p>
+                                <p>Most people with macular edema will have symptoms that range from slightly blurry vision to noticeable vision loss.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <h4 class="question">Treatment:</h4>
+                            <div class="answer">
+                                <p>First, tackle what's causing it, like high blood sugar or high blood pressure. Just keeping your levels close to normal can stop eye damage from happening or getting worse.</p>
+                                <p>The next step is to heal your retina. You should see an ophthalmologist or a retina specialist for treatment. What's right for you depends on the type of DME you have.</p>
+                            </div>
+                        </div>
+                    {% elif p == 2 %}
+                        <div class="faq-item">
+                            <h4 class="question">Symptoms:</h4>
+                            <div class="answer">
+                                <p>Distortion of straight lines in your field of vision (metamorphopsia)</p>
+                                <p>Difficulty adapting from bright lights to low lights</p>
+                                <p>Hazy or blurry vision</p>
+                                <p>Blank spot in your central vision</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <h4 class="question">Treatment:</h4>
+                            <div class="answer">
+                                <p>You can’t prevent drusen from forming. Having some hard drusen is considered normal.</p>
+                                <p>Early diagnosis of drusen with regular eye exams can help you find out if you’ve developed AMD. Not everyone with drusen will go on to develop AMD.</p>
+                                <p>Treatment for drusen isn’t necessary unless you also have AMD. Early treatment of AMD can slow the progression of the disease and minimize vision loss.</p>
+                            </div>
+                        </div>
+                        {% elif p == 3 %}
+                        <div class="faq-item">
+                            <h4 class="question">Tips to maintain healthy retina:</h4>
+                            <div class="answer">
+                                <ul>
+                                    <li>Poor diet containing insufficient nutrients can cause the health of the retina to degrade.  Therefore, it’s important to have a healthy and a balanced that contains all the essential nutrients.</li>
+                                    <li>Drinking plenty of water is important for ensuring a good retina health. When the body is properly hydrated, the tear glands are able to produce sufficient tears and properly moisturise the eyes. Also, drinking plenty of water helps in purifying blood and promoting blood flow.</li>
+                                    <li>Regular exercise helps in maintaining a healthy weight and promoting blood circulation to all body parts, including the eyes.</li>
+                                    <li>Regular smoking can impair blood flow to the eyes and retina which can lead to the onset of severe eye disorders such as macular degeneration. Although quitting smoking can be a tough habit to break, getting rid of it will certainly pay off.</li>
+                                    <li>Regular eye check-up is the key to maintaining a healthy retina and overall eye health. Also, regular eye check-up can help your doctor diagnose the early symptoms of eye disorders.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- <footer class="page-footer dark">
+        <div class="footer-copyright">
+            <p>Copyright © 2020 All rights reserved by Kamal Khumar</p>
+        </div>
+    </footer> -->
+    <script src="{{url_for('static', filename='js/jquery.min.js')}}"></script>
+    <script src="{{url_for('static', filename='bootstrap/js/bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/script.min.js')}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+</body>
+
+</html>

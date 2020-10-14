@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Upload</title>
+    <link rel="stylesheet" href=" {{url_for('static', filename='bootstrap/css/bootstrap.min.css')}} ">
+    <link rel="stylesheet" href=" {{url_for('static', filename='css/styles.min.css')}} ">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <style>
+        a 
+        {
+            color: rgb(245, 241, 6);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <div class="container"><a class="navbar-brand logo" href="{{url_for('index')}}">Raptors</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        </div>
+    </nav>
+    <main class="page landing-page">
+        <section class="clean-block clean-hero" style="background-image:url({{url_for('static', filename='img/tech/image.jpg')}});color:rgba(9, 162, 255, 0.85);">
+            <div class="text">
+                <h2>Retina Damage Detector from OCT Image</h2><br><br>
+                <form method="post" action="{{url_for('result')}}" enctype="multipart/form-data">
+                    <label for="fname">Name :&nbsp;&nbsp;</label>
+                    <input type="text" id="fname" name="fname" autocomplete="off" placeholder="Enter your name" required><br><br>
+                    <label for="img" style="padding-left: 80px;">Upload Image :&nbsp;</label>
+                    <input type="file" id="img" name="img" required><br><br><br>
+                    <input type="submit" value="Submit" class="btn btn-outline-light btn-lg">
+                </form>
+                <br><br>
+                <div class="container">
+                    <div class="heading">
+                        <button class="btn btn-outline-light btn-lg" onclick="show()">Download samples</button>
+                    </div>
+                    <div style="align-items: center;">
+                        <table id="show" style="display: none;padding-left: 130px;">
+                            <br><br>
+                            <tr>
+                                <th>Retina Defect</th>
+                                <th>Link</th>
+                            </tr>
+                            <tr>
+                                <td>Choroidal Neovascularization (CNV) &nbsp;&nbsp;&nbsp;</td>
+                                <td><a href="https://drive.google.com/drive/folders/1M85tPp7Sy6ZtDaUCtdSno9OkPZDjefUY?usp=sharing">Click Here</a></td>
+                            </tr>
+                            <tr>
+                                <td>Diabetic Macular Edema (DME)</td>
+                                <td><a href="https://drive.google.com/drive/folders/1xQvkBeNUbhlPXCiWJ_2T_6sn097kkP6r?usp=sharing">Click Here</a></td>
+                            </tr>
+                            <tr>
+                                <td>Drusen</td>
+                                <td><a href="https://drive.google.com/drive/folders/1pOTZPB_doH9HLpXZ8WDZRf2Q1e7wKpmc?usp=sharing">Click Here</a></td>
+                            </tr>
+                            <tr>
+                                <td>Regular Retina</td>
+                                <td><a href="https://drive.google.com/drive/folders/1OHos9xCc6jEaYuZ2rUNxWPtRnz3K0o5l?usp=sharing">Click Here</a></td>
+                            </tr>
+                        </table>
+                        </div>
+                </div>
+            </div>
+        </section>
+    </main>
+   <!-- <footer class="page-footer dark">
+        <div class="footer-copyright">
+            <p>Copyright © 2020 All rights reserved by Kamal Khumar</p>
+        </div>
+    </footer> -->
+    <script src="{{url_for('static', filename='js/jquery.min.js')}}"></script>
+    <script src="{{url_for('static', filename='bootstrap/js/bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/script.min.js')}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script type="text/javascript"> 
+        function show(){
+            table = document.getElementById("show")
+            if(table.style.display == "none"){
+                document.getElementById("show").style.display = "block";
+                //table.value = "Hide samples";
+            }
+            else{
+                document.getElementById("show").style.display = "none";
+                //table.value = "Show samples";
+            }
+        }
+    </script>
+</body>
+
+</html>

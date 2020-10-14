@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home</title>
+    <link rel="stylesheet" href=" {{url_for('static', filename='bootstrap/css/bootstrap.min.css')}} ">
+    <link rel="stylesheet" href=" {{url_for('static', filename='css/styles.min.css')}} ">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <div class="container"><a class="navbar-brand logo" href="{{url_for('index')}}">Raptors</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        </div>
+    </nav>
+    <main class="page landing-page">
+        <section class="clean-block clean-hero" style="background-image:url({{url_for('static', filename='img/tech/image.jpg')}});color:rgba(9, 162, 255, 0.85);">
+            <div class="text">
+                <h2>Retina Damage Detector from OCT Image</h2>
+                <p>Retinal optical coherence tomography (OCT) is an imaging technique used to capture high-resolution cross sections of the retinas of living patients. Approximately 30 million OCT scans are performed each year, and the analysis and interpretation of these images takes up a significant amount of time (Swanson and Fujimoto, 2017).</p>
+                <p>The CNN model is trained with 84,495 X-Ray images (JPEG) and 4 categories (NORMAL, CNV, DME, DRUSEN). Also, Image augmentation is used to increase the performance of the model. The accuracy of the model is 93%.</p>
+                <a href="{{url_for('upload')}}"><button class="btn btn-outline-light btn-lg" type="button">Continue</button></a>
+            </div>
+        </section>
+    </main>
+   <!-- <footer class="page-footer dark">
+        <div class="footer-copyright">
+            <p>Copyright © 2020 All rights reserved by Kamal Khumar</p>
+        </div>
+    </footer> -->
+    <script src="{{url_for('static', filename='js/jquery.min.js')}}"></script>
+    <script src="{{url_for('static', filename='bootstrap/js/bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/script.min.js')}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+</body>
+
+</html>
