@@ -1,5 +1,5 @@
 Flask==1.1.2
-gunicorn==20.0.4
+gunicorn==22.0.0
 h5py==2.10.0
 image==1.5.32
 itsdangerous==1.1.0
