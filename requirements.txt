@@ -7,4 +7,4 @@ numpy==1.22.0
 pandas==1.0.5
 tensorflow==2.12.1
 Werkzeug==3.0.3
-Keras==2.4.3
+Keras==2.13.1
